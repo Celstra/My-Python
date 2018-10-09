@@ -5,18 +5,23 @@
 #   151 - 180      	 wafer-thin mint
 #   181 - 200	     penguin
 
-points = 174 
-#List of current prizes
-prize = ["wooden rabbit", "no prize", "wafer-thin mint", "penguin"]
+points = 174
 
-# write your if statement here
+# establish the default prize value to None
+prize = None
+
+# use the points value to assign prizes to the correct prize names
 if points <= 50:
-    result = ("Congratulations! You won a " + prize[0])
-elif points <= 150:
-    result = ("Oh dear, " + prize[1] + " this time.")
-elif points <= 180:
-    result = ("Congratulations! You won a " + prize[2])
+    prize = "wooden rabbit"
+elif 151 <= points <= 180:
+    prize = "wafer-thin mint"
+elif points >= 180:
+    prize = "penguin"
+
+# use the truth value of prize to assign result to the correct prize
+if prize:
+    result = "Congratualtions! You won a {}!".format(prize)
 else:
-    result = ("Congratulations! You won a " + prize[3])
+    result = "Oh dear, no prize this time."
 
 print(result)
