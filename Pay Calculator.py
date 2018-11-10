@@ -10,9 +10,14 @@ except:
     print('Error, please enter numerical value')
     quit()
 
-if f_hrs <= 40:
-    pay = f_hrs * f_rate
-elif f_hrs > 40:
-    pay = (40 * f_rate) + (f_hrs - 40) * (f_rate * 1.5)
+def computepay(f_hrs,f_rate):
+    if f_hrs <= 40:
+        pay = f_hrs * f_rate
+        return pay
+    elif f_hrs > 40:
+        pay = (40 * f_rate) + (f_hrs - 40) * (f_rate * 1.5)
+        return pay
 
-print("Pay: " ,pay)
+p = computepay(f_hrs, f_rate)
+
+print("Pay", p)
