@@ -8,5 +8,5 @@ except:
     exit()
 
 for line in fh:
-    line = line.upper().rstrip()
-    print(line)
+    line = line.rstrip()
+    print(line.upper())
