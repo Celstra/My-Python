@@ -19,5 +19,6 @@ while True:
         except:
             print ('Invalid input')
 
+print('Maximum:', max(data),'Minimum: ', min(data))
 average = (sum / count)
 print ("Sum: " + str(sum), "Count: " + str(count), "Average: " + str(average))
